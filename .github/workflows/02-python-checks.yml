@@ -1,0 +1,35 @@
+name: python-checks
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ecu
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Lint (ruff)
+        run: |
+          pip install ruff
+          ruff check .
+
+      - name: Tests
+        run: |
+          pip install pytest
+          pytest -q
