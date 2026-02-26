@@ -1,6 +1,6 @@
 """Core dyno math for DynoMonsters.
 
-HP = (Torque_nm * RPM) / 5252
+HP = (torque_nm * RPM) / 5252
 
 All curves are represented as parallel arrays of rpm_bins (int) and
 torque_nm (float).  HP is always derived, never stored as source-of-truth.
