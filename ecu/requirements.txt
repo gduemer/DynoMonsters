@@ -1,0 +1,2 @@
+# DynoMonsters ECU Service — Phase 0
+# No heavy dependencies. Stdlib + minimal packages only.
