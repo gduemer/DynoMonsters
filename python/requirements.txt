@@ -1,0 +1,4 @@
+# DynoMonsters ECU Runner — Python dependencies
+# Phase 0: stdlib only. No external frameworks required.
+# pytest is used for testing only (not a runtime dependency).
+pytest>=7.0
